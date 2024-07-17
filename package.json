@@ -1,0 +1,28 @@
+{
+  "name": "munch_pos",
+  "version": "1.0.0",
+  "description": "Munch POS Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwenamokgohlwa/munch_pos.git"
+  },
+  "author": "Kwena Mokgohlwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwenamokgohlwa/munch_pos/issues"
+  },
+  "homepage": "https://github.com/kwenamokgohlwa/munch_pos#readme",
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "jasmine": "^5.1.0",
+    "joi": "^17.13.3",
+    "mysql2": "^3.10.3",
+    "sequelize": "^6.37.3"
+  }
+}
