@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/fastify-jwt": "^0.8.1",
     "@types/node": "^20.14.11",
     "@types/sequelize": "^4.28.20",
     "ts-node": "^10.9.2",
