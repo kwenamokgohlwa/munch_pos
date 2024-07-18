@@ -15,12 +15,12 @@
   },
   "homepage": "https://github.com/kwenamokgohlwa/munch_pos#readme",
   "dependencies": {
+    "@fastify/jwt": "^5.0.0",
+    "@fastify/sensible": "^4.0.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
-    "fastify-jwt": "^4.2.0",
     "fastify-plugin": "^4.5.1",
-    "fastify-sensible": "^3.2.0",
     "mysql2": "^3.10.3",
     "sequelize": "^6.37.3"
   },

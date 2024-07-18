@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
-import fastifyJwt from 'fastify-jwt';
-import fastifySensible from 'fastify-sensible';
+import fastifyJwt from '@fastify/jwt';
+import fastifySensible from '@fastify/sensible';
 import { initDb } from './models';
 import userRoutes from './routes/userRoutes';
 import productRoutes from './routes/productRoutes';
