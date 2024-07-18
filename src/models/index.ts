@@ -1,14 +1,12 @@
-import User from './user';
-import Product from './product';
-import UpsellProduct from './upsellProduct';
-import Transaction from './transaction';
-import TransactionItem from './transactionItem';
+import sequelize from '../config/database';
+import User from './User';
+import Product from './Product';
+import Transaction from './Transaction';
+import TransactionItem from './TransactionItem';
 
 // Associations
 User.hasMany(Transaction, { foreignKey: 'userId' });
 Transaction.belongsTo(User, { foreignKey: 'userId' });
-
-Product.belongsToMany(Product, { through: UpsellProduct, as: 'UpsellProducts', foreignKey: 'productId', otherKey: 'upsellProductId' });
 
 Transaction.hasMany(TransactionItem, { foreignKey: 'transactionId' });
 TransactionItem.belongsTo(Transaction, { foreignKey: 'transactionId' });
@@ -16,4 +14,8 @@ TransactionItem.belongsTo(Transaction, { foreignKey: 'transactionId' });
 TransactionItem.belongsTo(Product, { foreignKey: 'productId' });
 Product.hasMany(TransactionItem, { foreignKey: 'productId' });
 
-export { User, Product, UpsellProduct, Transaction, TransactionItem };
+const initDb = async () => {
+  await sequelize.sync({ force: true });
+};
+
+export { User, Product, Transaction, TransactionItem, initDb };

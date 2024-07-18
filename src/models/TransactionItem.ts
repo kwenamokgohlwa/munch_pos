@@ -1,7 +1,5 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 import sequelize from '../config/database';
-import Product from './product';
-import Transaction from './transaction';
 
 interface TransactionItemAttributes {
   id: number;
@@ -51,8 +49,5 @@ TransactionItem.init({
   sequelize,
   tableName: 'transaction_items',
 });
-
-TransactionItem.belongsTo(Transaction, { foreignKey: 'transactionId' });
-TransactionItem.belongsTo(Product, { foreignKey: 'productId' });
 
 export default TransactionItem;
