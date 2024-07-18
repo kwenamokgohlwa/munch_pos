@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - DB_NAME=munch_pos
+      - DB_USER=root
+      - DB_PASSWORD=password123
+      - DB_HOST=localhost
+      - JWT_SECRET=munch_secret
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: munch_pos
+      MYSQL_USER: root
+      MYSQL_PASSWORD: pasword123
+    ports:
+      - '3306:3306'

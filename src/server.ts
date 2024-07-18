@@ -6,12 +6,15 @@ import userRoutes from './routes/userRoutes';
 import productRoutes from './routes/productRoutes';
 import transactionRoutes from './routes/transactionRoutes';
 import dotenv from 'dotenv';
+import { authenticate } from './utils/auth';
 
 dotenv.config();
 
 const server = Fastify({
   logger: true,
 });
+
+server.decorate('authenticate', authenticate);
 
 server.register(fastifySensible);
 server.register(fastifyJwt, {
