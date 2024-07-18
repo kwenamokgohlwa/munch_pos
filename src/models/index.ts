@@ -1,8 +1,8 @@
-import User from './User';
-import Product from './Product';
-import UpsellProduct from './UpsellProduct';
-import Transaction from './Transaction';
-import TransactionItem from './TransactionItem';
+import User from './user';
+import Product from './product';
+import UpsellProduct from './upsellProduct';
+import Transaction from './transaction';
+import TransactionItem from './transactionItem';
 
 // Associations
 User.hasMany(Transaction, { foreignKey: 'userId' });
